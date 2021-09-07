@@ -13,8 +13,9 @@ export const getRandomStatus = () => {
 }
 
 export const getData = (qty) => {
-  return Array(qty).fill(null).map(() => {
+  return Array(qty).fill(null).map((_, i) => {
     return {
+      id: i + 1,
       name: shuffleString(initialName),
       count: getRandomNumber(500),
       status: getRandomStatus()

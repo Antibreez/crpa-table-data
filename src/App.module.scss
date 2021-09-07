@@ -1,0 +1,42 @@
+.App {
+    text-align: center;
+
+    h1 {
+        text-align: center;
+    }
+
+    table {
+        margin: 0 auto;
+        border-collapse: collapse;
+    }
+
+    td, th {
+        width: 200px;
+        border: 1px solid #ddd;
+        text-align: center;
+    }
+}
+
+.sortingBtn {
+    width: 100%;
+
+    &::after {
+        content: "▼▲";
+        margin-left: 10px;
+        color: #bbb;
+    }
+
+    &.up {
+        &::after {
+            content: "▼";
+            color: #000;
+        }
+    }
+
+    &.down {
+        &::after {
+            content: "▲";
+            color: #000;
+        }
+    }
+}
