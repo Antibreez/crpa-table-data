@@ -1,4 +1,4 @@
-const  initialName = 'string for shuffling';
+const  initialName = 'abcdefg abcdefg abcdefg';
 
 const shuffleString = str => {
    return str.split('').sort(function(){return 0.5-Math.random()}).join('');

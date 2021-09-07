@@ -1,4 +1,5 @@
 .App {
+    padding: 20px 20px 50px;
     text-align: center;
 
     h1 {
@@ -6,7 +7,7 @@
     }
 
     table {
-        margin: 0 auto;
+        margin: 20px auto 0;
         border-collapse: collapse;
     }
 
@@ -15,10 +16,24 @@
         border: 1px solid #ddd;
         text-align: center;
     }
+
+    th {
+        padding: 0;
+        font-size: 0;
+    }
 }
 
 .sortingBtn {
     width: 100%;
+    border: none;
+    border-radius: 0;
+    padding: 10px;
+    background-color: #eee;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #ddd;
+    }
 
     &::after {
         content: "▼▲";
@@ -39,4 +54,32 @@
             color: #000;
         }
     }
+}
+
+.pagination {
+    padding-top: 30px;
+}
+
+.pageBtn {
+    border: 1px solid #ccc;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    font-weight: bold;
+    border-radius: 50%;
+    background-color: transparent;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:not(:last-child) {
+        margin-right: 5px;
+    }
+}
+
+.activePage {
+    border: 1px solid black;
 }
